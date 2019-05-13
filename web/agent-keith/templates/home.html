@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <title>agent-keith</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <main>
+            <h2>If you're not Keith, you won't get the flag!</h2>
+            <p><b>Your agent is:</b> {{ user_agent }}</p>
+            <p><b>Flag:</b> {{ flag }}</p>
+            <!-- DEBUG (remove me!!): NCSA_Mosaic/2.0 (Windows 3.1) -->
+        </main>
+    </body>
+</html>
