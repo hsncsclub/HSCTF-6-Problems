@@ -1,0 +1,10 @@
+inspect-me:
+  build: ./inspect-me
+  ports:
+    - 8001:80
+
+agent-keith:
+  build: ./agent-keith
+  ports:
+    - 8002:80
+
