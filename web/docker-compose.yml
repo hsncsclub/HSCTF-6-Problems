@@ -8,3 +8,7 @@ agent-keith:
   ports:
     - 8002:80
 
+magic-juggling:
+  build: ./magic-juggling
+  ports:
+    - 8003:80
