@@ -1,0 +1,1 @@
+hsctf{esoteric_javascript_is_very_verbose}
