@@ -7,7 +7,7 @@ if (!isset($_GET["md4"]))
 	die();
 }
 
-if($_GET["md4"] == hash("md4", $_GET["md4"]))
+if ($_GET["md4"] == hash("md4", $_GET["md4"]))
 {
 	echo $flag;
 }
