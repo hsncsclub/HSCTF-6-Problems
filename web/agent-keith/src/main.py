@@ -13,7 +13,7 @@ def index(request):
     user_agent = request.headers.get("User-Agent")
 
     if user_agent == "NCSA_Mosaic/2.0 (Windows 3.1)":
-        flag = "HSCTF{wow_you_are_agent_keith_now}"
+        flag = "hsctf{wow_you_are_agent_keith_now}"
     else:
         flag = "Access Denied"
 
