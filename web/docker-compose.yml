@@ -1,14 +1,14 @@
 inspect-me:
   build: ./inspect-me
   ports:
-    - 8001:80
+    - 127.0.0.1:8001:80
 
 agent-keith:
   build: ./agent-keith
   ports:
-    - 8002:80
+    - 127.0.0.1:8002:80
 
-magic-juggling:
-  build: ./magic-juggling
+md5-minus-minus:
+  build: ./md5--
   ports:
-    - 8003:80
+    - 127.0.0.1:8003:80
