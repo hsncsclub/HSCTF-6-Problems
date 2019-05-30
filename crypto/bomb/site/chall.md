@@ -1,3 +1,5 @@
+*Written by: Tux*
+
 Keith found a weird message on his desk along with a drawing (bomb.png)
 ```
 Reflector: B
