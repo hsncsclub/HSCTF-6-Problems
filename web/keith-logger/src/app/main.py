@@ -31,7 +31,7 @@ def record():
         "time": str(datetime.datetime.now().time())
     }
 
-    collection.insert_one(post)
+    # collection.insert_one(post)
 
     return str(post)
 
