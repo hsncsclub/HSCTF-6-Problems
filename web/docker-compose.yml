@@ -1,14 +1,21 @@
-inspect-me:
-  build: ./inspect-me
-  ports:
-    - 127.0.0.1:8001:80
+version: '3'
+services:
+  inspect-me:
+    build: ./inspect-me
+    ports:
+      - 127.0.0.1:8001:80
 
-agent-keith:
-  build: ./agent-keith
-  ports:
-    - 127.0.0.1:8002:80
+  agent-keith:
+    build: ./agent-keith
+    ports:
+      - 127.0.0.1:8002:80
 
-md5-minus-minus:
-  build: ./md5--
-  ports:
-    - 127.0.0.1:8003:80
+  md5-minus-minus:
+    build: ./md5--
+    ports:
+      - 127.0.0.1:8003:80
+
+  keith-logger:
+    build: ./keith-logger
+    ports:
+      - 127.0.0.1:8004:80
