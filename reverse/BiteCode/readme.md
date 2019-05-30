@@ -1,0 +1,1 @@
+Only upload BiteCode.class.
