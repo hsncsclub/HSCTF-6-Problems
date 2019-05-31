@@ -6,9 +6,9 @@ import datetime
 
 app = Flask(__name__)
 
-database_address = "keith-logger-mongodb.web.chal.hsctf.com:27017"
+database_address = "admin:keithkeithkeith@keith-logger-mongodb.web.chal.hsctf.com:27017"
 
-client = MongoClient("mongodb://meow:kittiesarecute@{}".format(database_address), connect=False)
+client = MongoClient("mongodb://{}".format(database_address), connect=False)
 db = client.database
 collection = db.collection
 
