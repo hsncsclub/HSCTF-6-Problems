@@ -2,7 +2,6 @@
 
 ch = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!\"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~ '
 s = [SECRET_1, SECRET_2]
-
 # TOP SECRET: DO NOT LEAK
 def o(x,k):
 	return x<<k
@@ -20,7 +19,7 @@ def oro(a, b):
 	return a|b
 def h():
 	s1 = m(x(s[0],s[1]))
-	s[0] = m(oro(o(s[0],55),p(55,s[0]))^s1^(o(s1,14))) 
+	s[0] = m(x(oro(o(s[0],55),p(55,s[0])),x(s1,(o(s1,14)))))
 	s[1] = m(oro(o(s1,36),p(36,s1)))
 
 # Helper methods
