@@ -1,3 +1,0 @@
-Written by: Tux
-
-Need to make some edits. Scrap docker.
