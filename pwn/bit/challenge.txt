@@ -1,0 +1,6 @@
+name: bit
+difficulty: medium
+description: Just get the flippin' flag. [Binary](./bit).
+flag: HSCTF{flippin_pwn_g0d}
+deploy: execute `./compile.sh`
+provide: bit
