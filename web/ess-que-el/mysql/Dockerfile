@@ -1,0 +1,6 @@
+FROM mariadb
+ENV MYSQL_ROOT_PASSWORD=8g1Rq1lIcZHwpYkUvhJ8jx59QMhqZNF04UyY8Eh5dD2xWVasAncdHdHnUw1xVjSo
+ENV MYSQL_USER=ctf
+ENV MYSQL_PASSWORD=eGO24c5sfgxYBzvPvgPzunBu86RyHDj7RSjT976i3IaE7R14sUe4BfyDPy4cJO6t
+ENV MYSQL_DATABASE=keith_db
+COPY setup.sql /docker-entrypoint-initdb.d/setup.sql

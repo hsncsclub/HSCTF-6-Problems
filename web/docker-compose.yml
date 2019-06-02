@@ -19,3 +19,13 @@ services:
     build: ./keith-logger
     ports:
       - 127.0.0.1:8004:80
+
+  ess-que-el:
+    build: ./ess-que-el/app
+    ports:
+      - 127.0.0.1:8005:80
+  
+  ess-que-el-mysql:
+    build: ./ess-que-el/mysql
+    ports:
+      - 127.0.0.1:3306:3306
