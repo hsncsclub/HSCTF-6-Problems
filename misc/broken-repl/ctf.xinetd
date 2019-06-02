@@ -1,5 +1,7 @@
 service ctf
 {
+	cps		= 0 0
+	per_source	= 50
 	port		= 49151
 	protocol	= tcp
 	server		= repl.py
