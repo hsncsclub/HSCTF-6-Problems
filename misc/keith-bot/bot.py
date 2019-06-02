@@ -20,7 +20,7 @@ async def on_message(message):
     if message.author == bot.user:
         return
 
-    if message.guild is not None:
+    if message.guild is None:
         await bot.process_commands(message)
 
 @bot.command(name='eval')
