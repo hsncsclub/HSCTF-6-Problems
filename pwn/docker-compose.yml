@@ -16,3 +16,7 @@ services:
         build: hard-heap/
         ports:
           - "5555:9999"
+    caesars-revenge:
+        build: caesars-revenge/
+        ports:
+          - "4567:9999"

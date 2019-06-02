@@ -17,8 +17,8 @@ void caesar() {
     /* Code from https://stackoverflow.com/a/26583890 */
     while (fgets(s, sizeof(s), stdin)) {
         shift = strtol(s, &p, 10);
-        if (p == s || *p != '\n') {
-            printf("Please enter an integer this time: ");
+        if (p == s || *p != '\n' || shift <= 0) {
+            printf("Please enter an integer greater than 0 this time: ");
         } else break;
     }
 
