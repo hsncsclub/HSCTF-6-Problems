@@ -1,0 +1,9 @@
+service ctf
+{
+	port		= 49151
+	protocol	= tcp
+	server		= repl.py
+	type		= UNLISTED
+	user		= root
+	wait		= no
+}
