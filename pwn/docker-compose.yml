@@ -8,8 +8,11 @@ services:
         build: storytime/
         ports:
           - "3333:9999"
+    bit:
+        build: bit/
+        ports: 
+          - "4444:9999"
     hard-heap:
         build: hard-heap/
         ports:
           - "5555:9999"
-

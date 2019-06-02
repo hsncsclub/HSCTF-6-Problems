@@ -1,7 +1,6 @@
-FROM ubuntu:18.04
+FROM ubuntu:16.04
 
-RUN sed -i "s/http:\/\/archive.ubuntu.com/http:\/\/mirrors.tuna.tsinghua.edu.cn/g" /etc/apt/sources.list && \
-    dpkg --add-architecture i386 && \
+RUN dpkg --add-architecture i386 && \
     apt-get update && apt-get -y dist-upgrade && \
     apt-get install -y lib32z1 xinetd libc6:i386 \
     libncurses5:i386 libstdc++6:i386 multiarch-support

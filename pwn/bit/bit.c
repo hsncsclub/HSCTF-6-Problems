@@ -33,6 +33,8 @@ void flip(unsigned long bit, unsigned short int offset) {
 }
 
 int main(unsigned long argc, char **argv) {
+    setvbuf(stdout, NULL, _IONBF, 0);
+
     char input[10];
 
     printf("Welcome to the bit.\n\nNo nonsense, just pwn this binary. You have 4 tries. Live up to kmh's expectations, and get the flag.\n\n");
