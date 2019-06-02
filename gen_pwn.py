@@ -2,6 +2,7 @@
 
 import requests
 import os
+import os.path
 
 xinetd = """
 service ctf
@@ -26,16 +27,26 @@ service ctf
 """
 
 name = raw_input("What is the name of your problem? (All lowercase please): ")
+path = "pwn/{}".format(name)
 
-os.mkdir("pwn/{}".format(name), 0755)
+try:
+    os.mkdir(path, 0755)
+except OSError:
+    if not os.path.isdir(path):
+        raise
 
 r = requests.get("https://raw.githubusercontent.com/Eadom/ctf_xinetd/master/Dockerfile", allow_redirects=True)
-open("pwn/{}/Dockerfile".format(name), 'wb').write(r.content)
+open(path + "/Dockerfile".format(name), 'wb').write(r.content)
 
 r = requests.get("https://raw.githubusercontent.com/Eadom/ctf_xinetd/master/start.sh", allow_redirects=True)
-open("pwn/{}/start.sh".format(name), 'wb').write(r.content)
+open(path + "/start.sh".format(name), 'wb').write(r.content)
 
-open("pwn/{}/ctf.xinetd".format(name), 'w').write(xinetd.format(name))
-os.mkdir("pwn/{}/bin".format(name), 0755)
+open(path + "/ctf.xinetd".format(name), 'w').write(xinetd.format(name))
+
+try:
+    os.mkdir(path + "/bin", 0755)
+except OSError:
+    if not os.path.isdir(path + "/bin"):
+        raise
 
 print "Done! Place your compiled binary and flag (with correct name) into pwn/{}/bin!".format(name)
