@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 RUN sed -i "s/http:\/\/archive.ubuntu.com/http:\/\/mirrors.tuna.tsinghua.edu.cn/g" /etc/apt/sources.list && \
     apt-get update && apt-get -y dist-upgrade && \
@@ -21,7 +21,8 @@ RUN mkdir /home/ctf/dev && \
 RUN mkdir /home/ctf/bin && \
     cp /bin/sh /home/ctf/bin && \
     cp /bin/ls /home/ctf/bin && \
-    cp /bin/cat /home/ctf/bin
+    cp /bin/cat /home/ctf/bin && \
+    cp /usr/bin/md5sum /home/ctf/bin
 
 COPY ./ctf.xinetd /etc/xinetd.d/ctf
 COPY ./start.sh /start.sh
@@ -30,8 +31,6 @@ RUN echo "Blocked by ctf_xinetd" > /etc/banner_fail
 RUN chmod +x /start.sh
 
 COPY ./bin/ /home/ctf/
-RUN rm /home/ctf/lib/x86_64-linux-gnu/libc.so.6 && \
-    mv ./bin/libc-2.27.so /home/ctf/lib/x86_64-linux-gnu
 RUN chown -R root:ctf /home/ctf && \
     chmod -R 750 /home/ctf && \
     chmod 740 /home/ctf/flag

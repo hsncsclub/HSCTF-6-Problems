@@ -1,8 +1,10 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 RUN sed -i "s/http:\/\/archive.ubuntu.com/http:\/\/mirrors.tuna.tsinghua.edu.cn/g" /etc/apt/sources.list && \
+    dpkg --add-architecture i386 && \
     apt-get update && apt-get -y dist-upgrade && \
-    apt-get install -y lib32z1 xinetd
+    apt-get install -y lib32z1 xinetd libc6:i386 \
+    libncurses5:i386 libstdc++6:i386 multiarch-support
 
 RUN useradd -m ctf
 
@@ -32,7 +34,7 @@ RUN chmod +x /start.sh
 COPY ./bin/ /home/ctf/
 RUN chown -R root:ctf /home/ctf && \
     chmod -R 750 /home/ctf && \
-    chmod 740 /home/ctf/flag
+    chmod 740 /home/ctf/flag.txt
 
 CMD ["/start.sh"]
 
