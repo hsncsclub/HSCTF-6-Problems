@@ -6,6 +6,6 @@ service ctf
 	protocol	= tcp
 	server		= repl.py
 	type		= UNLISTED
-	user		= root
+	user		= nobody
 	wait		= no
 }
