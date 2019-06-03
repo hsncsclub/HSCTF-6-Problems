@@ -20,3 +20,7 @@ services:
         build: caesars-revenge/
         ports:
           - "4567:9999"
+    intro-to-netcat:
+        build: intro-to-netcat/
+        ports:
+          - "1111:1111"
