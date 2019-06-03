@@ -4,7 +4,8 @@ service ctf
 	per_source	= 50
 	port		= 49151
 	protocol	= tcp
-	server		= repl.py
+	server		= /usr/bin/python3
+	server_args     = repl.py
 	type		= UNLISTED
 	user		= nobody
 	wait		= no
