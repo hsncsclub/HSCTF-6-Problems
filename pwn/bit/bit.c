@@ -13,7 +13,7 @@ void flag() {
 
     printf("[🛐] pwn gods like you deserve this: ");
 
-    f = fopen("flag.txt", "r");
+    f = fopen("flag", "r");
 
     while((s = fgetc(f)) != EOF) {
         printf("%c", s);

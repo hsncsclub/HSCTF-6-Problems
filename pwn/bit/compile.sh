@@ -1,6 +1,9 @@
 #!/bin/sh
 
-gcc bit.c -o bit -m32 -no-pie -g0 
-echo 'HSCTF{flippin_pwn_g0d}' > flag
+rm -r bin
 
-cp flag bit bin/
+gcc bit.c -o bit -m32 -no-pie -g0 
+echo 'hsctf{flippin_pwn_g0d}' > flag
+
+mkdir -p bin
+mv flag bit bin/
