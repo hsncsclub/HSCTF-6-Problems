@@ -2,11 +2,15 @@
 #include <string.h>
 #include <stdio.h>
 
+void win() {
+	system("/bin/sh");
+}
+
 void vuln() {
 	char dest[8];
-	printf("Dude you hear about that new game called /bin/sh");
-	printf("? Enter the right combo for some COMBO CARNAGE!: ");
+	printf("Where are you sending your mail to today? ");
 	gets(dest);
+	printf("Alright, to %s it goes!\n", dest);
 }
 
 int main() {

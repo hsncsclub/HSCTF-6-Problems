@@ -7,3 +7,4 @@ echo 'hsctf{fedex_dont_fail_me_now}' > flag
 
 mkdir -p bin
 mv flag return-to-sender bin/
+cp return-to-sender.c bin/

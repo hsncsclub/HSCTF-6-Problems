@@ -7,3 +7,4 @@ echo 'hsctf{i_thought_konami_code_would_work_here}' > flag
 
 mkdir -p bin
 mv flag combo-chain bin/
+cp combo-chain.c bin/
