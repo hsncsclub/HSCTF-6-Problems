@@ -1,1 +1,1 @@
-HSCTF{l0l-opt1mizati0ns_ar3-disabl3d}
+hsctf{l0l-opt1mizati0ns_ar3-disabl3d}
