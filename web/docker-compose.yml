@@ -25,7 +25,7 @@ services:
     ports:
       - 127.0.0.1:8005:80
   
-   s-q-l-mysql:
+  s-q-l-mysql:
     build: ./s-q-l/mysql
     ports:
       - 127.0.0.1:3306:3306
