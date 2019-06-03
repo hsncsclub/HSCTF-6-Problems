@@ -1,2 +1,2 @@
-#!/usr/bin/env python3
-print("Hey, here's your flag! hsctf{internet_cats}")
+#!/usr/bin/env python2
+print "Hey, here's your flag! hsctf{internet_cats}"

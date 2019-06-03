@@ -11,4 +11,4 @@ COPY talk.py flag.txt /
 
 CMD ["xinetd", "-dontfork"]
 
-EXPOSE 1111
+EXPOSE 49151

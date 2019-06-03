@@ -4,8 +4,8 @@ service ctf
 	per_source	= 50
 	port		= 49151
 	protocol	= tcp
-	server		= /usr/bin/python
-	server_args	= -u talk.py
+	server		= talk.py
+#	server_args	= -u talk.py
 	type		= UNLISTED
 	user		= nobody
 	wait		= no
