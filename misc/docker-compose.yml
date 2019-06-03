@@ -1,0 +1,14 @@
+version: '3'
+services:
+	admin-pass:
+	  build: ./admin-pass
+	  ports:
+	    - 8001:80
+  a-simple-conversation:
+    build: ./a-simple-conversation
+    ports:
+      - 9001:49151
+  broken-repl:
+    build: ./broken-repl
+    ports:
+      - 9010:49151
