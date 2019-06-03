@@ -24,3 +24,11 @@ services:
         build: intro-to-netcat/
         ports:
           - "1111:49151"
+    return-to-sender:
+      build: return-to-sender
+      ports:
+        - "1234:9999"
+    combo-chain:
+      build: combo-chain
+      ports:
+        - "2345:9999"
