@@ -12,3 +12,5 @@ services:
     build: ./broken-repl
     ports:
       - 8550:49151
+  keith-bot:
+    build: ./keith-bot
