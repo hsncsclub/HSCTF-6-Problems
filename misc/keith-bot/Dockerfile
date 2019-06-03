@@ -16,8 +16,12 @@ RUN mkdir /home/ctf/dev && \
 
 RUN pip3 install discord.py
 
-COPY bot.py flag.txt /
+COPY bot.py flag.txt /home/ctf/
 
 ENV DISCORD_API_KEY=NTg0OTU3ODU4MzY2NjE5NjQ4.XPSerg.BMqTlYPbgd4_YnmqZDN6rgLxyU4
+
+RUN chown -R root:ctf /home/ctf && \
+    chmod -R 750 /home/ctf && \
+    chmod 740 /home/ctf/flag.txt
 
 CMD python3 bot.py
