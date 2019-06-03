@@ -8,7 +8,7 @@ echo("<!doctype html>
 <head>
   <meta charset=\"utf-8\">
   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">
-  <title>ess-que-el</title>
+  <title>s-q-l</title>
   <link href=\"bootstrap.min.css\" rel=\"stylesheet\">
   <link href=\"signin.css\" rel=\"stylesheet\">
 </head>
@@ -32,13 +32,13 @@ echo("<!doctype html>
 <head>
   <meta charset=\"utf-8\">
   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">
-  <title>ess-que-el</title>
+  <title>s-q-l</title>
   <link href=\"bootstrap.min.css\" rel=\"stylesheet\">
   </style>
 </head>
 <body class=\"text-center\">
   <h1 class=\"h3 mb-3 font-weight-normal\">Hello Keith!</h1>
-  <h1 h1 class=\"h3 mb-3 font-weight-normal\">The flag is hsctf{mysql_real_escape_string}</h1>
+  <h1 class=\"h3 mb-3 font-weight-normal\">The flag is hsctf{mysql_real_escape_string}</h1>
 </body>
 </html>");
 }
