@@ -29,7 +29,9 @@ void flip(unsigned long bit, unsigned short int offset) {
     unsigned short int val = *b;
     
     *b ^= 1UL << offset;
-    printf("Here you are: %x\n", *b);
+    printf("Here's your new byte: %x\n", *b);
+
+    return;
 }
 
 int main(unsigned long argc, char **argv) {
@@ -47,21 +49,20 @@ int main(unsigned long argc, char **argv) {
         errno = 0;
         if (errno == ERANGE) {
             printf("Lol, try again (hex uint32).");
-            exit(0);
+            exit(1);
         } else {
             printf("Give me the index of the bit: ");
             fgets(input, 10, stdin);
             unsigned short int offset = (unsigned short int) strtol(input, NULL, 10);
 
             if(offset < 0 || offset > 7) {
-                offset = 7 - offset;
+                printf("Try again.");
+                exit(1);
             }
 
             printf("Took care of %08x at offset %d for ya.\n\n", decoded, offset);
 
             flip(decoded, offset);
-
-            flag();
         }
     }
 
