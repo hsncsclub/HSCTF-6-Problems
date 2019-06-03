@@ -1,9 +1,9 @@
 version: '3'
 services:
-	admin-pass:
-	  build: ./admin-pass
-	  ports:
-	    - 8001:80
+  admin-pass:
+    build: ./admin-pass
+    ports:
+      - 8001:80
   a-simple-conversation:
     build: ./a-simple-conversation
     ports:
@@ -11,4 +11,4 @@ services:
   broken-repl:
     build: ./broken-repl
     ports:
-      - 9010:49151
+      - 8550:49151
