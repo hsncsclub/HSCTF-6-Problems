@@ -3,7 +3,7 @@
 rm -r bin
 
 gcc combo-chain-lite.c -o combo-chain-lite -no-pie -g0 -fno-stack-protector
-echo 'hsctf{i_thought_konami_code_would_work_here}' > flag
+echo 'hsctf{wheeeeeee_that_was_fun}' > flag
 
 mkdir -p bin
 mv flag combo-chain-lite bin/
