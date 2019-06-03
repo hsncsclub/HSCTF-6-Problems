@@ -1,34 +1,38 @@
 version: '3'
 services:
-    aria-writer:
-        build: aria-writer/
-        ports:
-          - "2222:9999"
-    storytime:
-        build: storytime/
-        ports:
-          - "3333:9999"
-    bit:
-        build: bit/
-        ports: 
-          - "4444:9999"
-    hard-heap:
-        build: hard-heap/
-        ports:
-          - "5555:9999"
-    caesars-revenge:
-        build: caesars-revenge/
-        ports:
-          - "4567:9999"
-    intro-to-netcat:
-        build: intro-to-netcat/
-        ports:
-          - "1111:49151"
-    return-to-sender:
-      build: return-to-sender
-      ports:
-        - "1234:9999"
-    combo-chain:
-      build: combo-chain
-      ports:
-        - "2345:9999"
+  aria-writer:
+    build: aria-writer/
+    ports:
+      - "2222:9999"
+  storytime:
+    build: storytime/
+    ports:
+      - "3333:9999"
+  bit:
+    build: bit/
+    ports: 
+      - "4444:9999"
+  hard-heap:
+    build: hard-heap/
+    ports:
+      - "5555:9999"
+  caesars-revenge:
+    build: caesars-revenge/
+    ports:
+      - "4567:9999"
+  intro-to-netcat:
+    build: intro-to-netcat/
+    ports:
+      - "1111:49151"
+  return-to-sender:
+    build: return-to-sender
+    ports:
+      - "1234:9999"
+  combo-chain:
+    build: combo-chain
+    ports:
+      - "2345:9999"
+  byte:
+    build: byte
+    ports:
+      - "6666:9999"
