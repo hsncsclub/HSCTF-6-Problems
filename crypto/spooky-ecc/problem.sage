@@ -34,3 +34,6 @@ def secure_send_flag():
     flag += " " * ((16 - len(flag)) % 16)
     ciphertext = obj.encrypt(flag)
 
+    import binascii
+    print binascii.hexlify(ciphertext)
+
