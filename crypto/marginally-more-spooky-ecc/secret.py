@@ -1,0 +1,1 @@
+flag = "hsctf{Y_does_4lice_have_such_weird_cuRV3s?}"
