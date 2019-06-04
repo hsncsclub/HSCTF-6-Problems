@@ -24,4 +24,6 @@ RUN chown -R root:ctf /home/ctf && \
     chmod -R 750 /home/ctf && \
     chmod 740 /home/ctf/flag.txt
 
+USER ctf
+
 CMD python3 bot.py
