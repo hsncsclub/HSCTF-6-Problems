@@ -1,4 +1,4 @@
 #!/bin/bash
 
-gcc -fno-stack-protector caesars-revenge.c -o bin/caesars-revenge
-echo "hsctf{shoulda_left_format_string_back_in_the_roman_empire}" > bin/flag
+gcc caesars-revenge.c -o bin/caesars-revenge -no-pie
+echo "hsctf{should_have_left_%n_back_in_ancient_rome}" > bin/flag

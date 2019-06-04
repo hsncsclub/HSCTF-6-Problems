@@ -1,4 +1,16 @@
-admin-pass:
-  build: ./admin-pass
-  ports:
-    - 127.0.0.1:8080:80
+version: '3'
+services:
+  admin-pass:
+    build: ./admin-pass
+    ports:
+      - 8001:80
+  a-simple-conversation:
+    build: ./a-simple-conversation
+    ports:
+      - 9001:49151
+  broken-repl:
+    build: ./broken-repl
+    ports:
+      - 8550:49151
+  keith-bot:
+    build: ./keith-bot

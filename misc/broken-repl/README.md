@@ -1,7 +1,7 @@
 <table>
   <tr>
     <td><strong>Name</strong></td>
-    <td>broken-repl</td>
+    <td>Broken REPL</td>
   </tr>
   <tr>
     <td><strong>Category</strong></td>

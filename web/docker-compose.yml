@@ -20,12 +20,12 @@ services:
     ports:
       - 127.0.0.1:8004:80
 
-  ess-que-el:
-    build: ./ess-que-el/app
+  s-q-l:
+    build: ./s-q-l/app
     ports:
       - 127.0.0.1:8005:80
   
-  ess-que-el-mysql:
-    build: ./ess-que-el/mysql
+  s-q-l-mysql:
+    build: ./s-q-l/mysql
     ports:
       - 127.0.0.1:3306:3306

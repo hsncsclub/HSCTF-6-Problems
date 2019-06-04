@@ -1,0 +1,1 @@
+flag = "hsctf{Anomalous curves, m0ar like anom00se curves}"

@@ -1,7 +1,7 @@
 <table>
   <tr>
     <td><strong>Name</strong></td>
-    <td>cool-image-2</td>
+    <td>Cool Image 2</td>
   </tr>
   <tr>
     <td><strong>Category</strong></td>

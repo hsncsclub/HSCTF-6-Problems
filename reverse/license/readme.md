@@ -9,5 +9,9 @@ his flag? All he knows is:
 * He put his name (in the form of 'k3ith') as the first part of the flag
 * There are 3 underscores
 * The flag is in the format hsctf{}
+* The flag doesn't have random character sequences (you should be able to read the entire flag easily).
+* The flag only contains lowercase English letters and numbers.
+* The generator might produce the same keys for different inputs because Keith was too lazy to write
+the algorithm properly.
 
 Recommended points: 150 - 200

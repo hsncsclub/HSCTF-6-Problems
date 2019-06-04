@@ -26,6 +26,11 @@ public class DaHeck {
             System.exit(1);
         }
 
+        if (args[0].length() != 47) {
+            System.out.println(":thonkeng:");
+            System.exit(1);
+        }
+
         if (check_flag(args[0])) System.out.println("Huh. How'd you know?");
         else System.out.println("Da heck? No.");
     }

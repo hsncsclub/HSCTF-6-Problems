@@ -1,0 +1,6 @@
+version: '3'
+services:
+  tux-talk-show-2019:
+    build: tux-talk-show-2019/
+    ports:
+      - "6767:9999"

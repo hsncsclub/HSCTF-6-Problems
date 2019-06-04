@@ -1,7 +1,7 @@
 <table>
   <tr>
     <td><strong>Name</strong></td>
-    <td>a-simple-conversation</td>
+    <td>A Simple Conversation</td>
   </tr>
   <tr>
     <td><strong>Category</strong></td>

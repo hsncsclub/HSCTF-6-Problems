@@ -1,0 +1,12 @@
+service ctf
+{
+	cps		= 0 0
+	per_source	= 50
+	port		= 49151
+	protocol	= tcp
+	server		= talk.py
+#	server_args	= -u talk.py
+	type		= UNLISTED
+	user		= nobody
+	wait		= no
+}
