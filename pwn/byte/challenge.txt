@@ -1,0 +1,6 @@
+name: byte
+difficulty: easy
+description: Free arbitrary null write primitive, get the flag
+flag: HSCTF{l0l-opt1mizati0ns_ar3-disabl3d}
+deploy: execute `./compile.sh`
+provide: byte

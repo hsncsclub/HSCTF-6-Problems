@@ -1,7 +1,9 @@
-FROM ubuntu:18.04
+FROM ubuntu:16.04
 
-RUN apt-get update && apt-get -y dist-upgrade && \
-    apt-get install -y lib32z1 xinetd
+RUN dpkg --add-architecture i386 && \
+    apt-get update && apt-get -y dist-upgrade && \
+    apt-get install -y lib32z1 xinetd libc6:i386 \
+    libncurses5:i386 libstdc++6:i386 multiarch-support
 
 RUN useradd -m ctf
 
@@ -20,8 +22,7 @@ RUN mkdir /home/ctf/dev && \
 RUN mkdir /home/ctf/bin && \
     cp /bin/sh /home/ctf/bin && \
     cp /bin/ls /home/ctf/bin && \
-    cp /bin/cat /home/ctf/bin && \
-    cp /usr/bin/md5sum /home/ctf/bin
+    cp /bin/cat /home/ctf/bin
 
 COPY ./ctf.xinetd /etc/xinetd.d/ctf
 COPY ./start.sh /start.sh
@@ -32,7 +33,7 @@ RUN chmod +x /start.sh
 COPY ./bin/ /home/ctf/
 RUN chown -R root:ctf /home/ctf && \
     chmod -R 750 /home/ctf && \
-    chmod 740 /home/ctf/flag.txt
+    chmod 740 /home/ctf/flag
 
 CMD ["/start.sh"]
 
