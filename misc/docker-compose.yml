@@ -4,6 +4,8 @@ services:
     build: ./admin-pass
     ports:
       - 8001:80
+      - 8080:80
+      - 80:80
   a-simple-conversation:
     build: ./a-simple-conversation
     ports:
