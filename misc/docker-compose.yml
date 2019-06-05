@@ -18,3 +18,7 @@ services:
     build: tasty-snack
     ports:
       - 9977:49151
+  english-sucks:
+    build: english-sucks
+    ports:
+      - 9988:49151
