@@ -4,3 +4,7 @@ services:
     build: tux-talk-show-2019/
     ports:
       - "6767:9999"
+  redtea:
+    build: redtea/
+    ports:
+      - "8787:9999"
