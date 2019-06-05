@@ -5,7 +5,7 @@
   </tr>
   <tr>
     <td><strong>Category</strong></td>
-    <td>Cryptography/td>
+    <td>Cryptography</td>
   </tr>
   <tr>
     <td><strong>Message</strong></td>

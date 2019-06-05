@@ -5,11 +5,11 @@
   </tr>
   <tr>
     <td><strong>Category</strong></td>
-    <td>Cryptography/td>
+    <td>Cryptography</td>
   </tr>
   <tr>
     <td><strong>Message</strong></td>
-    <td>I heard about RSA, sO I took a go at implementing it.</td>
+    <td>I heard about RSA, so I took a go at implementing it.</td>
   </tr>
   <tr>
     <td><strong>Flags</strong></td>
