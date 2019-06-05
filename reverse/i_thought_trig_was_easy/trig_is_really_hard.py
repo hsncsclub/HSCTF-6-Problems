@@ -11,7 +11,6 @@ def get_number(char):
 inp = input("Enter the text: ")
 
 out = []
-gay = []
 for i in range(0, len(inp)):
     for j in lots_of_nums(nice_math(get_number(inp[i]), len(inp) - i), i + 1):
         out.append(nice_math(j, i + 1))
