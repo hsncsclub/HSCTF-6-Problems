@@ -4,7 +4,7 @@
 
 #define WORDS_MAX 370100
 
-char *flag;
+char flag[40];
 
 typedef struct {
   char *w;
@@ -21,7 +21,8 @@ word opt[26][26][26];
 
 int main(void) {
   FILE *fflag = fopen("flag.txt", "r");
-  fscanf(fflag, "%s", flag);
+  fgets(flag, 100, fflag);
+  printf("flag: %x\n", &flag);
   FILE *fw = fopen("words.txt", "r");
   if (fw == NULL) {
     perror("fopen");
@@ -39,9 +40,14 @@ int main(void) {
     learn(dict[i]);
   printf("Preproccessed.\n");
   while (1) {
-    char s[4];
-    fgets(s, 4, stdin);
+    char s[100];
+    fgets(s, 100, stdin);
     stdinflush();
+    word bob;
+    bob.w = s;
+    bob.len = strlen(s);
+    learn(bob);
+    fgets(s, 100, stdin);
     word res = optc(s[0],s[1],s[2]);
     printf(res.w ? "%s (%d)\n" : "No words found!\n", res.w, res.len);
   }

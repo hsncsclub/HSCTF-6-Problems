@@ -1,6 +1,6 @@
 #!/bin/sh
 
-rm -rf bin
+rm bin/flag.txt bin/redtea
 mkdir -p bin
 
 gcc redtea.c -o redtea -Wall -m32 -fPIE -pie -Os -Wl,-z,relro,-z,now -g0 -fstack-protector
