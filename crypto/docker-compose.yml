@@ -8,3 +8,8 @@ services:
         build: super-secure-system
         ports:
           - "8111:2000"
+    tuxs-kitchen:
+        build: kitchen
+        ports:
+          - "8112:2000"
+
