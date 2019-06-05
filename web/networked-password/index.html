@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Networked Password</title>
+    </head>
+    <body>
+	{% if incorrect %}
+	<h2>Incorrect Password</h2>
+	{% elif correct %}
+	<h2>Correct Password</h2>
+	{% endif %}
+	<form method="POST">
+	    <input type="password" placeholder="password" name="password"/>
+	    <input type="submit"/>
+	<form>
+    </body>
+</html>
