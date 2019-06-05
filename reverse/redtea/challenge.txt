@@ -1,6 +1,13 @@
 name: redtea
 difficulty: cup of tea
-description: reverse stuff
-flag: hsctf{rob_made_jess_a_cup_of_tea_wink_wink_101}
+description: 
+
+Written by: tpa
+
+This will help you beat your friends!
+
+`nc rev.hsctf.com 8787`
+
+flag: hsctf{rob_made_some1_special_a_cup_of_tea_wink_wink_101}
 deploy: execute `./compile.sh`
 provide: redtea
