@@ -20,6 +20,7 @@ word opt[26][26][26];
 #define optc(a,b,c) opt[a-'a'][b-'a'][c-'a']
 
 int main(void) {
+  setvbuf(stdout, NULL, _IONBF, 0);
   FILE *fflag = fopen("flag.txt", "r");
   fscanf(fflag, "%s", flag);
   FILE *fw = fopen("words.txt", "r");
