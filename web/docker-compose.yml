@@ -29,3 +29,8 @@ services:
     build: ./s-q-l/mysql
     ports:
       - 127.0.0.1:3306:3306
+      
+  networked-password:
+    build: ./networked-password
+    ports:
+      - 127.0.0.1:8006:80
