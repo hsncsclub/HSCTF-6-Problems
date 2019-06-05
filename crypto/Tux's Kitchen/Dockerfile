@@ -1,6 +1,6 @@
-FROM python:3
+FROM python:2
 
 COPY files/ /chall
 WORKDIR /chall
 
-CMD [ "python", "chall.py" ]
+CMD [ "python2", "chall.py" ]
