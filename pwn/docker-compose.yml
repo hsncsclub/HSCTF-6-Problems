@@ -40,7 +40,7 @@ services:
     build: combo-chain-lite
     ports:
       - "3131:9999"
-  aria-writer-v2:
-    build: aria-writer-v2
+  aria-writer-v3:
+    build: aria-writer-v3
     ports:
-      - "3232:9999"
+      - "2468:9999"
