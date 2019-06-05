@@ -43,7 +43,6 @@ int main(void) {
   while (1) {
     char s[100];
     fgets(s, 100, stdin);
-    stdinflush();
     word bob;
     bob.w = s;
     bob.len = strlen(s);
