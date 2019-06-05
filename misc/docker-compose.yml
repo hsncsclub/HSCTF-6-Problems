@@ -14,3 +14,7 @@ services:
       - 8550:49151
   keith-bot:
     build: ./keith-bot
+  tasty-snack:
+    build: tasty-snack
+    ports:
+      - 9977:49151
