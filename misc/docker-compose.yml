@@ -22,3 +22,7 @@ services:
     build: english-sucks
     ports:
       - 9988:49151
+  json-info:
+    build: json-info
+    ports:
+      - 9999:49151 
