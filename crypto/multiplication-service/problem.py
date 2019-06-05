@@ -67,7 +67,7 @@ try:
     print("0 : get curve params")
     print("1 : get multiple on point")
     print("2 : guess private key")
-    choice = input("enter choice\n")
+    choice = raw_input("enter choice\n")
     if choice == '0':
         print("Ed448")
         print("ax^2 + y^2 = 1 + dx^2y^2, x,y in F_p")
