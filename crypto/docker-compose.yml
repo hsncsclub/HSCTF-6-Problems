@@ -9,7 +9,6 @@ services:
         ports:
           - "8111:2000"
     tuxs-kitchen:
-        build: kitchen
+        build: tuxs-kitchen
         ports:
           - "8112:2000"
-
