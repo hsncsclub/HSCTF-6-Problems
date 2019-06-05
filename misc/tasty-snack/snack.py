@@ -1,4 +1,4 @@
-import pickle, sys
+import os, pickle, sys
 
 class Unpickler(pickle.Unpickler):
     def find_class(self, module, name):
