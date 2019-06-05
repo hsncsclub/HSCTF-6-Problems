@@ -1,14 +1,18 @@
 version: '3'
 services:
-    bomb:
-        build: bomb
-        ports:
-          - "8100:2000"
-    storytime:
-        build: super-secure-system
-        ports:
-          - "8111:2000"
-    tuxs-kitchen:
-        build: tuxs-kitchen
-        ports:
-          - "8112:2000"
+  bomb:
+    build: bomb
+    ports:
+      - "8100:2000"
+  storytime:
+    build: super-secure-system
+    ports:
+      - "8111:2000"
+  tuxs-kitchen:
+    build: tuxs-kitchen
+    ports:
+      - "8112:2000"
+  multiplication-service:
+    build: multiplication-service
+    ports:
+      - "8113:49151"

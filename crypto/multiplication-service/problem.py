@@ -1,34 +1,6 @@
 # privkey is an integer
 from secret import privkey, flag
 
-def welcome():
-    print("Welcome to our multiplication service")
-    print("Enter one of the following:")
-    print("0 : get curve params")
-    print("1 : get multiple on point")
-    print("2 : guess private key")
-    choice = raw_input("enter choice\n")
-    if choice == '0':
-        print("Ed448")
-        print("ax^2 + y^2 = 1 + dx^2y^2, x,y in F_p")
-        print("a = 1")
-        print("d = -39081")
-        print("p = 2^448 - 2^224 - 1")
-    elif choice == '1':
-        print("Enter point in the form `x,y`")
-        coordinate = raw_input()
-        coords = coordinate.split(",")
-        point = (int(coords[0]), int(coords[1]))
-        print(sign(point))
-    else:
-        print("enter private key guess as an integer")
-        guess = int(raw_input())
-        if guess == privkey:
-            print(flag)
-        else:
-            print("Try again!")
-
-
 p = 2**448 - 2**224 - 1
 a = 1 % p
 d = (-39081) % p
@@ -89,9 +61,33 @@ def inverse_mod(a, m):
         raise ValueError
     return x % m
 
-if __name__ == "__main__":
-    try:
-        welcome()
-    except:
-        print("bad input")
-        pass
+try:
+    print("Welcome to our multiplication service")
+    print("Enter one of the following:")
+    print("0 : get curve params")
+    print("1 : get multiple on point")
+    print("2 : guess private key")
+    choice = input("enter choice\n")
+    if choice == '0':
+        print("Ed448")
+        print("ax^2 + y^2 = 1 + dx^2y^2, x,y in F_p")
+        print("a = 1")
+        print("d = -39081")
+        print("p = 2^448 - 2^224 - 1")
+    elif choice == '1':
+        print("Enter point in the form `x,y`")
+        coordinate = raw_input()
+        coords = coordinate.split(",")
+        point = (int(coords[0]), int(coords[1]))
+        print(sign(point))
+    else:
+        print("enter private key guess as an integer")
+        guess = int(raw_input())
+        if guess == privkey:
+            print(flag)
+        else:
+            print("Try again!")
+
+except:
+    print("bad input")
+    pass
