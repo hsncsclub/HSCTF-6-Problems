@@ -1,0 +1,12 @@
+service ctf
+{
+	cps		= 0 0
+	per_source	= 25
+	port		= 49151
+	protocol	= tcp
+	rlimit_cpu	= 25
+	server		= mt
+	type		= UNLISTED
+	user		= nobody
+	wait		= no
+}

@@ -1,0 +1,13 @@
+service ctf
+{
+	cps		= 0 0
+	per_source	= 25
+	port		= 49151
+	protocol	= tcp
+	rlimit_cpu	= 25
+	server		= /usr/bin/python3
+	server_args	= -u json_info.py
+	type		= UNLISTED
+	user		= nobody
+	wait		= no
+}

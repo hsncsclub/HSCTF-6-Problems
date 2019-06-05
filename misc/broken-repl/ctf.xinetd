@@ -1,16 +1,13 @@
 service ctf
 {
 	cps		= 0 0
-	per_source	= 50
+	per_source	= 25
 	port		= 49151
 	protocol	= tcp
+	rlimit_cpu	= 25
 	server		= /usr/bin/python3
-	server_args     = repl.py
+	server_args	= repl.py
 	type		= UNLISTED
 	user		= nobody
 	wait		= no
-	# safety options
-    per_source	= 10 # the maximum instances of this service per source IP address
-    rlimit_cpu	= 20 # the maximum number of CPU seconds that the service may use
-    #rlimit_as  = 1024M # the Address Space resource limit for the service
 }
