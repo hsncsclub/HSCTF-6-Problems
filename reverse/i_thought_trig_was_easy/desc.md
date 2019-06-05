@@ -25,6 +25,6 @@
   </tr>
   <tr>
     <td><strong>Hints</strong></td>
-    <td>Align each letter of input with its corresponding group of characters for output.</td>
+    <td>Each letter of input adds a certain amount of numbers to the output. Find the pattern and align letters of input to letters of output.</td>
   </tr>
 </table>
