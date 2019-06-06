@@ -41,7 +41,7 @@ int main(void) {
     learn(dict[i]);
   printf("Preproccessed.\n");
   while (1) {
-    char s[100];
+    static char s[100];
     fgets(s, 100, stdin);
     word bob;
     bob.w = s;
