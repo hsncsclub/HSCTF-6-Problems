@@ -1,19 +1,13 @@
-import discord
+import asyncio
 from discord.ext import commands
 import os
-import sys
-import inspect
-import io
-import textwrap
-import traceback
-from contextlib import redirect_stdout
 
-bot = commands.Bot(command_prefix=commands.when_mentioned_or('_'))
-bot.remove_command('help')
+bot = commands.Bot(command_prefix=commands.when_mentioned_or("_"))
+bot.remove_command("help")
 
 @bot.event
 async def on_ready():
-    print("Logged in as " + str(bot.user))
+    print("Logged in as", bot.user)
 
 @bot.event
 async def on_message(message):
@@ -22,47 +16,24 @@ async def on_message(message):
 
     if message.guild is None:
         await bot.process_commands(message)
+    elif bot.user in message.mentions:
+        await message.channel.send(f"{message.author.mention} DM me")
 
-@bot.command(name='eval')
+@bot.command(name="eval")
 async def _eval(ctx, *, body):
-    env = {'__builtins__': {}}
-    body = cleanup_code(body)
-    stdout = io.StringIO()
-    err = out = None
-
-    to_compile = f'async def func():\n{textwrap.indent(body, "  ")}'
-
-    try:
-        exec(to_compile, env)
-    except Exception as e:
-        err = await ctx.send(f'```py\n{e.__class__.__name__}: {e}\n```')
-        return
-
-    func = env['func']
-    try:
-        with redirect_stdout(stdout):
-            ret = await func()
-    except Exception as e:
-        value = stdout.getvalue()
-        err = await ctx.send(f'```py\n{value}{traceback.format_exc()}\n```')
+    if body.startswith("```") and body.endswith("```"):
+        body = "\n".join(body.split("\n")[1:-1])
     else:
-        value = stdout.getvalue()
-        if ret is None:
-            if value:
-                out = await ctx.send(f'```py\n{value}\n```')
-        else:
-            bot._last_result = ret
-            out = await ctx.send(f'```py\n{value}{ret}\n```')
+        body = body.strip("` \n")
 
-def cleanup_code(content):
-    if content.startswith('```') and content.endswith('```'):
-        return '\n'.join(content.split('\n')[1:-1])
+    process = await asyncio.create_subprocess_exec("env", "-i", "python3", "eval.py", stdin=asyncio.subprocess.PIPE, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
 
-    return content.strip('` \n')
+    try:
+        out, err = await asyncio.wait_for(process.communicate(body.encode()), 5)
+    except asyncio.TimeoutError:
+        await process.kill()
+    else:
+        if out or err:
+            await ctx.send(f"```py\n{out.decode()}{err.decode()}\n```")
 
-def get_syntax_error(e):
-    if e.text is None:
-        return f'```py\n{e.__class__.__name__}: {e}\n```'
-    return f'```py\n{e.text}{"^":>{e.offset}}\n{e.__class__.__name__}: {e}```'
-
-bot.run(os.environ.get("DISCORD_API_KEY"), reconnect=True)
+bot.run(os.environ["DISCORD_API_KEY"], reconnect=True)
