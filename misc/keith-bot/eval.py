@@ -5,7 +5,8 @@ import textwrap
 
 pw = pwd.getpwnam("nobody")
 
-os.chroot("home")
+os.chdir("home")
+os.chroot(".")
 
 os.setgid(pw.pw_gid)
 os.setuid(pw.pw_uid)
