@@ -8,6 +8,7 @@ pw = pwd.getpwnam("nobody")
 os.chdir("home")
 os.chroot(".")
 
+os.setgroups(())
 os.setgid(pw.pw_gid)
 os.setuid(pw.pw_uid)
 
